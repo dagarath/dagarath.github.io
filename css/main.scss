@@ -3,30 +3,90 @@
 
 @import 'foundation';
 @include foundation-everything;
-nav.top-bar {
+
+/* Variables */
+
+nav.top-bar{
+	background-color: #000000;
+}
+
+// Adjust width accordingly (use even #'s)
+$logo-width: 96px;
+// Reduce px value to increase space between logo and menu text
+$logo-padding: $logo-width - 32px; 
+// Leave alone
+$logo-margin: - ($logo-width / 2);
+
+/* Small Navigation */
+.logo-small {
+  float: right;
+}
+li.nav {
     background-color: #000000;
 }
 
-div.top-bar{
-  background-color: rgba(0,0,0,0);
+.title-bar {
+  padding: 0.5rem;
+}
+ul.vertical.medium-horizontal.menu li a{
+	padding-top: 0;
+	padding-bottom: 0;
+
 }
 
-li.menu-text {
-    background-color: #000000 ;
+.menu-icon,
+.title-bar-title {
+  position: relative;
+  top: 10px;
 }
 
-main {
-  @include grid-row;
-  article {
-    header, div:first {
-      @include grid-column(12);
+/* Medium-Up Navigation */
+@media only screen and (min-width: 40rem) { 
+	.nav-text {
+	  display: none;
+	}
+	a.sprite.nav-home {
+    padding-left: 0;
+}
+a.sprite.nav-about{
+	padding-left: 0;
+}
+  .logo-wrapper {
+    position: relative;
+    
+    .logo {
+      width: $logo-width;
+      height:  92px;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      top: -6px;
+      margin-left: $logo-margin;
     }
   }
-  padding : {
-    left: 20px;
-    right: 20px;
+
+  // Right part
+  .top-bar-right {
+    width: 50%;
+    padding-left: $logo-padding;
+    
+    ul {
+      float: left;
+    }
+  }
+  
+  // Left part
+  .top-bar-left {
+    width:  50%;
+    padding-right: $logo-padding;
+    
+    ul {
+      float: right;
+    }
   }
 }
+
+
 
 .sprite {
 display: inline-block;
@@ -53,16 +113,15 @@ top: -32px;
 left: 0;
 top: 0;
 }
+a.sprite{
+	background: #010;
+}
+
 .sprite-nav-about img {
 left: -32px;
 top: 0;
 }
 
-
-
-body{
-  background-image: url(img/daggerwrath.png)
-}
 
 footer {
   padding: 20px;

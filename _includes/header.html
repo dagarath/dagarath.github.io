@@ -1,27 +1,41 @@
 <header>
-  <nav class="top-bar">
-    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-		<button class="menu-icon" type="button" data-toggle></button>
-		<div class="title-bar-title">Menu</div>
-	</div>
+<!-- Small Navigation -->
+<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+  <a class="logo-small show-for-small-only" href="#">{% include /logo.html %}</a>
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
 
-	<div class="top-bar" id="main-menu">
-		<div class="top-bar-left">
-			<ul class="dropdown menu" data-dropdown-menu>
-			  <li class="menu-text">{% include /logo.html %}{% unless page.title == "Home" %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endunless %}</li>
-			</ul>
-		</div>
-		<div class="top-bar-right" align="left">
-			  <li>
-				  <a href="/" class="sprite nav-home">
-				  <img src="/img/nav-home.png" alt="Home">
-				  </a>
-				  &nbsp;
-				  <a href="/about" class="sprite nav-about">
-				  <img src="/img/nav-about.png" alt="About">
-				  </a>
-			  </li>
-		</div>
-	</div>
-  </nav>
+<!-- Medium-Up Navigation -->
+<nav class="top-bar" id="nav-menu">
+
+  <div class="logo-wrapper hide-for-small-only">
+    <div class="logo" align="center">
+      {% include /logo.html %}
+    </div>
+  </div>
+
+  <!-- Left Nav Section -->
+  <div class="top-bar-left">
+    <ul class="vertical medium-horizontal menu">
+		<li class="nav">
+			<a href="/" class="sprite nav-home">
+				<img src="/img/nav-home.png" alt="Home"><div class="nav-text">Home</div>
+			</a>
+		</li>
+    </ul>
+  </div>
+  
+  <!-- Right Nav Section -->
+  <div class="top-bar-right">
+  <ul class="vertical medium-horizontal menu">
+  <li class="nav"><a href="/about" class="sprite nav-about">
+				  <img src="/img/nav-about.png" alt="About"><div class="nav-text">About</div>
+				  </a></li>
+	
+	</ul>
+  </div>
+
+</nav>
+</div>
 </header>
