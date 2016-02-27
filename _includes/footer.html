@@ -1,6 +1,17 @@
- <script src="{{ page.base_url }}assets/javascripts/vendor/jquery/jquery-2.1.4.min.js"></script>
-  <script src="{{ page.base_url }}assets/javascripts/foundation.min.js"></script>
-  <script src="{{ page.base_url }}assets/javascripts/scripts.js"></script>
+<footer class="site-footer">
+	<div align="center">
+		<h6>
+			Site designed and maintained by Dagarath
+		</h6>
+		{% if site.twitter_username %}<a href="http://github.com/{{ site.twitter_username }}">{% include /icon-github.html %}</a>{% endif %}
+		&nbsp;
+		{% if site.github_username %}<a href="http://twitter.com/{{ site.github_username }}">{% include /icon-twitter.html %}</a>{% endif %}
+		
+	
+	</div>
+    <script src="{{ "/js/foundation.min.js" | prepend: site.baseurl }}"></script>
+	<script>
+		$(document).foundation();
+	</script>
 
-  </body>
-</html>
+</footer>

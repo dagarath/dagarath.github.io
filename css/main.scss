@@ -1,0 +1,39 @@
+---
+---
+
+@import 'foundation';
+@include foundation-everything;
+nav.top-bar {
+    background-color: #000000;
+}
+
+div.top-bar{
+  background-color: rgba(0,0,0,0);
+}
+
+li.menu-text {
+    background-color: #000000 ;
+}
+
+main {
+  @include grid-row;
+  article {
+    header, div:first {
+      @include grid-column(12);
+    }
+  }
+  padding : {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+body{
+  background-image: url(img/daggerwrath.png)
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
