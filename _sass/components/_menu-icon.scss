@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin foundation-menu-icon {
   .menu-icon {
     @include hamburger($color: $titlebar-icon-color, $color-hover: $titlebar-icon-color-hover);
@@ -7,3 +8,14 @@
     @include hamburger;
   }
 }
+=======
+@mixin foundation-menu-icon {
+  .menu-icon {
+    @include hamburger($color: $titlebar-icon-color, $color-hover: $titlebar-icon-color-hover);
+  }
+
+  .menu-icon.dark {
+    @include hamburger;
+  }
+}
+>>>>>>> efe7d51e143c084a850bde6ab9dea9982e6ac76d

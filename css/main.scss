@@ -1,14 +1,10 @@
 ---
 ---
 
-@import 'foundation';
-@include foundation-everything;
+
 
 /* Variables */
 
-nav.top-bar{
-	background-color: #000000;
-}
 
 // Adjust width accordingly (use even #'s)
 $logo-width: 96px;
@@ -24,7 +20,9 @@ $logo-margin: - ($logo-width / 2);
 li.nav {
     background-color: #000000;
 }
-
+nav.top-bar{
+	background-color: #000000;
+}
 .title-bar {
   padding: 0.5rem;
 }

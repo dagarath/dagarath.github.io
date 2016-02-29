@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin foundation-flex-classes {
   // Horizontal alignment using justify-content
   @each $hdir, $prop in map-remove($-zf-flex-justify, left) {
@@ -26,3 +27,33 @@
     }
   }
 }
+=======
+@mixin foundation-flex-classes {
+  // Horizontal alignment using justify-content
+  @each $hdir, $prop in map-remove($-zf-flex-justify, left) {
+    .align-#{$hdir} {
+      @include flex-align($x: $hdir);
+    }
+  }
+
+  // Vertical alignment using align-items and align-self
+  @each $vdir, $prop in $-zf-flex-align {
+    .align-#{$vdir} {
+      @include flex-align($y: $vdir);
+    }
+
+    .align-self-#{$vdir} {
+      @include flex-align-self($y: $vdir);
+    }
+  }
+
+  // Source ordering
+  @include -zf-each-breakpoint {
+    @for $i from 1 through 6 {
+      .#{$-zf-size} {
+        @include flex-order($i);
+      }
+    }
+  }
+}
+>>>>>>> efe7d51e143c084a850bde6ab9dea9982e6ac76d
