@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Foundation for Sites by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -26,32 +25,3 @@
     @include clearfix;
   }
 }
-=======
-// Foundation for Sites by ZURB
-// foundation.zurb.com
-// Licensed under MIT Open Source
-
-////
-/// @group float
-////
-
-@mixin foundation-float-classes {
-  .float-left {
-    float: left !important;
-  }
-
-  .float-right {
-    float: right !important;
-  }
-
-  .float-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .clearfix {
-    @include clearfix;
-  }
-}
->>>>>>> efe7d51e143c084a850bde6ab9dea9982e6ac76d
