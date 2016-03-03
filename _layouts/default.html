@@ -9,10 +9,21 @@ layout: compress
   <main>
 	<div class="row full">
     {% include header.html %}
-	
-        {{ content }}
+  </div>
+  <div class="row">
+    <div class="left-sidebar medium-3 large-2 columns">
 
-    {% include footer.html %}	
-	</div>
+    </div>
+    <div class="main-content medium-6 large-8 columns">
+        {{ content }}
+    </div>
+    <div class="right-sidebar medium-3 large-2 columns">
+
+    </div>
+  </div>
+    <div class="row full">
+    {% include footer.html %}
+    </div>
+
   </main>
 </html>

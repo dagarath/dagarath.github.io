@@ -11,18 +11,46 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 0px;
   background-color: black;
   color: white;
 }
-
 footer{
   display: inline-block;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 0px;
   background-color: black;
   color: white;
+}
+@include breakpoint(medium){
+  .row.full {
+		max-width: 100%;
+	}
+  .main-content{
+    display: block;
+		margin: 0 auto;
+    position: relative;
+    padding-top: 55px;
+  }
+
+  .left-sidebar{
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    top: 48px;
+    bottom: 60px;
+    background-color: #202020;
+  }
+
+  .right-sidebar{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 48px;
+    bottom: 60px;
+    background-color: #202020;
+  }
 }
