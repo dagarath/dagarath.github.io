@@ -10,15 +10,15 @@ layout: compress
 	<div class="row full">
     {% include header.html %}
   </div>
-  <div class="row">
-    <div class="left-sidebar medium-3 large-2 columns">
-
+  <div class="row large-12">
+    <div class="left-sidebar small-12 medium-3 large-2 columns">
+      {%  include sidebar-left.html %}
     </div>
-    <div class="main-content medium-6 large-8 columns">
-        {{ content }}
+    <div class="main-content small-12 medium-6 large-8 columns">
+        {% include content.html %}
     </div>
-    <div class="right-sidebar medium-3 large-2 columns">
-
+    <div class="right-sidebar small-12 medium-3 large-2 columns">
+        {%  include sidebar-right.html %}
     </div>
   </div>
     <div class="row full">

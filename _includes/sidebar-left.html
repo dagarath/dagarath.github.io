@@ -1,0 +1,20 @@
+<!-- this adds Foundation Icon Fonts!! -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+    <div class="row">
+      <div class="medium-4 columns">
+        <div class="profile-card">
+          {% assign author = site.data.users[page.author] %}
+          <img src="{{ author.avatar }}" alt="{{ author.displayname }}">
+          <div class="profile-info">
+
+            <h4 class="subheader">{{ author.displayname }}</h4>
+            <p>{{ author.description }}</p>
+            <p><a href="{{ author.donate }}">Donate</a> | <a href="{{ author.website }}">Website</a></p>
+            <ul class="inline-list">
+              {% if author.twitter %}<li><a href="https://twitter.com/{{ author.twitter }}"><i class="fi-social-twitter"></i></a></li>{% endif %}
+              {% if author.github %}<li><a href="https://github.com/{{ author.github }}"><i class="fi-social-github"></i></a></li>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
